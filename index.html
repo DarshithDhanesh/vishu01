@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Vishu</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div id="mainPage" class="page main-page active">
+    <div class="kani-strip">
+      <span>🌼</span><span>🪔</span><span>🌼</span><span>🪔</span><span>🌼</span>
+    </div>
+
+    <h1 class="vishu-title">Happy Vishu</h1>
+    <p class="vishu-subtitle">വിഷു ആശംസകൾ</p>
+
+    <div class="photo-frame">
+      <div class="photo-ring">
+        <div class="photo-inner">
+          <div class="photo-inner" id="photoInner">
+        <img id="userPhoto" src="vishu.jpeg" alt="Your photo">
+        </div>
+          
+         
+
+          <input type="file" id="fileInput" class="upload-input"
+                 accept="image/*" onchange="loadPhoto(event)">
+        </div>
+      </div>
+    </div>
+
+    <div class="flowers-row">
+      <span class="flower">🌸</span>
+      <span class="flower">🌺</span>
+      <span class="flower">🌻</span>
+      <span class="flower">🌸</span>
+      <span class="flower">🌺</span>
+    </div>
+
+    <p class="greeting-text">
+      May this Vishu bring you joy, prosperity, and beautiful new beginnings.
+    </p>
+
+    <button class="kaineetam-btn" onclick="goToSorry()">Kaineetam</button>
+<br>
+    <p class="vishu-year">Vishu 2026 · കോലം</p>
+  </div>
+
+  <div id="sorryPage" class="page sorry-page">
+    <div class="sorry-icon">🙅</div>
+    <h2 class="sorry-title">No Kaineetam for you!</h2>
+    <p class="sorry-sub">Better luck next year 😄</p>
+
+    <div class="confetti-row">
+      <span>🪙</span><span>🌼</span><span>🪙</span><span>🌼</span><span>🪙</span>
+    </div>
+
+    <button class="back-btn" onclick="goBack()">← Go back</button>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

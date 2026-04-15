@@ -1,0 +1,189 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Serif Malayalam', Georgia, serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page { display: none; min-height: 100vh; width: 100%; }
+.page.active { display: flex; flex-direction: column; align-items: center; }
+
+.main-page {
+  background: linear-gradient(160deg, #fffbe6, #fff7d6, #fef3c7);
+  padding: 2.5rem 1.5rem;
+  position: relative;
+}
+
+.kani-strip { display: flex; gap: 10px; margin-bottom: 1.5rem; font-size: 22px; }
+
+.vishu-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #92400e;
+  text-align: center;
+}
+
+.vishu-subtitle {
+  font-size: 15px;
+  color: #b45309;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.photo-ring {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, #f59e0b, #fde68a);
+}
+
+.photo-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fde68a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-placeholder {
+  text-align: center;
+  cursor: pointer;
+  color: #b45309;
+}
+
+.upload-input { display: none; }
+
+.flowers-row { display: flex; gap: 6px; margin: 1.5rem 0; }
+
+.greeting-text {
+  text-align: center;
+  max-width: 280px;
+  margin-bottom: 2rem;
+}
+
+.kaineetam-btn {
+      z-index: 1;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 44px;
+      font-size: 17px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 18px rgba(217,119,6,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+}
+.kaineetam-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(217,119,6,0.45);
+    }
+
+  .kaineetam-btn:active { transform: scale(0.97); }
+
+  .kaineetam-btn::before {
+      content: '🪙';
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+.sorry-page {
+      background: linear-gradient(160deg, #fef2f2 0%, #fff1f2 50%, #fce7f3 100%);
+      padding: 3rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .sorry-page::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: rgba(251,113,133,0.12);
+    }
+
+    .sorry-icon {
+      font-size: 64px;
+      margin-bottom: 1rem;
+      z-index: 1;
+      animation: wobble 1.2s ease-in-out;
+    }
+
+    @keyframes wobble {
+      0%   { transform: rotate(0deg) scale(0.5); opacity: 0; }
+      40%  { transform: rotate(-8deg) scale(1.15); }
+      60%  { transform: rotate(6deg) scale(0.95); }
+      80%  { transform: rotate(-3deg) scale(1.05); }
+      100% { transform: rotate(0deg) scale(1); opacity: 1; }
+    }
+
+    .sorry-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #9f1239;
+      text-align: center;
+      z-index: 1;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+
+    .sorry-sub {
+      font-size: 15px;
+      color: #be123c;
+      text-align: center;
+      z-index: 1;
+      margin-bottom: 2rem;
+      opacity: 0.75;
+    }
+
+    .back-btn {
+      z-index: 1;
+      background: transparent;
+      color: #9f1239;
+      border: 1.5px solid #f43f5e;
+      border-radius: 50px;
+      padding: 11px 30px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .back-btn:hover { background: #9f1239; color: #fff; }
+
+    .confetti-row {
+      font-size: 20px;
+      display: flex;
+      gap: 8px;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .vishu-year {
+      font-size: 13px;
+      color: #b45309;
+      z-index: 1;
+      margin-top: 1.5rem;
+      opacity: 0.6;
+      letter-spacing: 1px;
+    }
